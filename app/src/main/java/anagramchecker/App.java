@@ -26,8 +26,8 @@ public class App {
    * Latin alphabet, we only need 26 counters, otherwise we unlikely to exceed more than 200,000
    * counters (there are 149,186 chars in Unicode, and we don't need special chars).
    *
-   * <p>Let's do the math: 200,000 chars * 8 bytes (for long) * 1,000 parallel threads = 1.6 GB.
-   * Having so bad conditions we will allocate 1.6 GB memory.
+   * <p>Let's do the math: 200,000 counters * 8 bytes (for long) * 1,000 parallel threads * 2 texts
+   * = 3.2 GB. Having so bad conditions we will allocate 3.2 GB memory.
    *
    * <p>When it comes to backend this is nothing and RAM is cheaper than the CPU.
    *
